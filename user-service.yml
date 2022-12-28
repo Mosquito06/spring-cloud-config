@@ -3,11 +3,16 @@ spring:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb
     username: sa
-    pasword: '{cipher}19c0edadb0d9163e9bb5fe3d2ddb305404c0ac9911c43775f1c1c1d5d06dc0e8'
+    password: '{cipher}AQBg6eWwNUqlgIII8QBQV6yCgf0BiUeiuhssWAvQzGpnICSt5TA9mvHCcIt8DMpJ/D+JODEHZCNAaQ+q+LJWI7jhNMjnUG5FRlFPJNsTGP76ZwL9T4Ap4sD4FcO92bFHGzbts9PLWxg3NhAdVwl4inApLG9ZSpI7mr3/NmG/byqS1gGeE5KQc86qgboTGHvAO+8LBdXZGNnKBvqoWxMU5UHAg79zirJR09/BYZ8wf7kBm5zeNi0a9zr4r1AZcNARFpSy+OYswOvcchJzAO/wGkIZq6WaFUhk/reSo2TfVczDac/gxJoQk4QxauVcuWLLg6LI2LABRsohM9ZDEzRNVaXUpaqbJYN+x622P3bhJBukPrA/uQLYNoaeUL1kJnxcJ3o='
 
 token:
   expiration_time: 86400000
-  secret: user_token_native_user_service
+  secret: '{cipher}AQCLX7yRDiKH9PhQjt6WjaV/OIYKNOKFWeCrU/yQBE3C8ee0kCPLFcFVy5rwUmUWKExNtRMCEMAkE85VLJLDv1L0Ywk1N5wkmqBexEZXoUjAMCmfNxUKQTwRiwAFt1UCLDenU/C7N+X0w3B5X6iIyy0MS8L+Womco4wQm0OTmQYN4NmBxt5PS9YyzTHDeaxqvacX6uoDkEtUR2yQ2WHqdcXlJpYjq8UGOoWHRgAhUw4b1QtEpORvURC+P3P/swzXY74oTTLPY9ePJ/aqKdZWW/PZlCWif6spTmbL58GS7lINAR8i0M/VMOothTPUtpantWy3uHmZQbTTvsk/g07wYAOZ5IChCVLo3WmH5b+k0EU73S9kXK/n6p7PB1NzL48fSBwoXx8gn7BbiUyE0G1ypbe8'
 
 gateway:
   ip: 192.168.222.92
+
+order_service:
+  url: http://order-service/order-service/%s/orders
+  exception:
+    order_is_empty: User's orders is empty_changed
